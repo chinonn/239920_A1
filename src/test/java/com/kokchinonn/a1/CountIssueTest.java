@@ -36,7 +36,7 @@ public class CountIssueTest {
  
     @Test
     public void testCountJava() {
-        System.out.println("Filter");
+        System.out.println("Count Java Files");
         String[] countJavaFile = new String[4];
         CountIssue instance = new CountIssue();
         instance.countJava(countJavaFile);

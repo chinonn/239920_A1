@@ -7,21 +7,22 @@
 package com.kokchinonn._a1;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
 public class CountIssue {
   
-    public int i=0;
-    public int noIssue=0;
-    public int totalJava=0;
-    String directory = "C:\\Users\\User\\Documents\\NetBeansProjects\\239920_A1\\Folder";
+    public int i = 0;
+    public int noIssue = 0;
+    public int totalJava = 0;
+    String directory = System.getProperty("user.dir") + File.separator + "Folder";
     String path;
     private final String keyword = "public static void main";
 
     public void countJava(String[] countJavaFile) {
-        for (String countJavaFile1 : countJavaFile) {
-            path=directory+"\\"+ countJavaFile[i];
+        for (String countJavaFileOne : countJavaFile) {
+            path=directory + File.separator + countJavaFile[i];
             try (final BufferedReader br = new BufferedReader(new FileReader(path))) {
                 String scanCurrentLine;
                 while ((scanCurrentLine = br.readLine()) != null) {
@@ -29,7 +30,7 @@ public class CountIssue {
                         noIssue++;
                     }
                 }
-                i++;
+                i++ ;
             }catch (IOException e) {
                 System.out.println("Error, file cannot be read.");
             }

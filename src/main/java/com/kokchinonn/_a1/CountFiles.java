@@ -14,13 +14,13 @@ public class CountFiles {
     final File folder = new File(directory);
     
     public String[] countJavaFiles() {
-        int i=0;
+        int i = 0;
         for (final File fileEntry : folder.listFiles()) {
             if (fileEntry.isDirectory()) {
                 countJavaFiles();
             } else {
                 if (fileEntry.getName().contains("java")){
-                countJavaFile[i]= fileEntry.getName();
+                countJavaFile[i] = fileEntry.getName();
                 i++;
                 }
             }

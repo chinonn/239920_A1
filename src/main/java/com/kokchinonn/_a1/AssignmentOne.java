@@ -11,7 +11,7 @@ public class AssignmentOne {
     public static void main(String[] args) throws Exception{
        
         CountFiles countFiles = new CountFiles();
-        String[] countJavaFile =countFiles.countJavaFiles();
+        String[] countJavaFile = countFiles.countJavaFiles();
         
         CountIssue countIssue = new CountIssue();
         countIssue.countJava(countJavaFile);
