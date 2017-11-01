@@ -40,7 +40,7 @@ public class CountFilesTest {
     public void testCountJavaFiles() {
         System.out.println("Count Java Files");
         String[] countJavaFile = new String[4];
-        String[] expResult = {};
+        String[] expResult = {"MySleep.java","MyThread.java","TestWaitNotify.java","ThreadBlocked.java"};
         CountFiles cf = new CountFiles();
         String[] result = cf.countJavaFiles();
         assertArrayEquals(expResult, result);

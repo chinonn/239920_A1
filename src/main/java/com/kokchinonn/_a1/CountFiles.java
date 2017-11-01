@@ -10,7 +10,7 @@ import java.io.File;
 
 public class CountFiles {
     String[] countJavaFile = new String[4];
-    String directory = "C://Users//User//Documents//NetBeansProjects//239920_A1//Folder";
+    String directory = System.getProperty("user.dir") + File.separator + "Folder";
     final File folder = new File(directory);
     
     public String[] countJavaFiles() {
